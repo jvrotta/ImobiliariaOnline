@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Imóveis</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <h2>Cadastrar Imóvel</h2>
+        <form>
+          <div>
+            <label for="imovel-type">Tipo de Imóvel</label>
+            <select name="imovel-type" id="imovel-type" class="input-select">
+              <option value="" disabled selected>Selecione o Tipo</option>
+              <option value="Casa">Casa</option>
+              <option value="Apartamento">Apartamento</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="imovel-area">Área do Imóvel</label>
+            <input
+              type="number"
+              name="imovel-area"
+              id="imovel-area"
+              placeholder="240m²"
+              class="input-select"
+            />
+          </div>
+
+          <div>
+            <label for="imovel-situation">Situação do Imóvel</label>
+            <select
+              name="imovel-situation"
+              id="imovel-situation"
+              class="input-select"
+            >
+              <option value="" disabled selected>Selecione a Situação</option>
+              <option value="Alugado">Alugado</option>
+              <option value="Desocupado">Desocupado</option>
+            </select>
+          </div>
+
+          <button type="button" onclick="addHouse()">Cadastrar</button>
+        </form>
+      </div>
+
+      <div>
+        <h2>Imóveis Disponiveis</h2>
+        <ul id="house-list">
+          <li class="house">
+            <div class="imovel-situation-rented">
+              <p>Tipo do Imóvel: Casa</p>
+              <p>Área do Imóvel: 240m²</p>
+              <p>Situação do Imóvel: Desocupado</p>
+            </div>
+            <button type="button" onclick="deleteHouse(this)">Excluir</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
